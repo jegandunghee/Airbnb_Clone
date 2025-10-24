@@ -1,0 +1,22 @@
+// flex 설정 
+@mixin flex_layout($just:center,$dire:row, $align:center, $gap:1rem){
+  display: flex;
+  flex-direction: $dire;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+}
+
+// 반응형 구간에 따른 정의
+@mixin tablet{
+  @media all and (min-width:768px) {
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media all and (min-width:1200px) {
+    @content;
+  }
+}
+

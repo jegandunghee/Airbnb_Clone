@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+.michroma-regular {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 12px;
+}
+@media all and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media all and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: #fff;
+  color: #222;
+}
+
+header {
+  background-image: linear-gradient(#fff, #eee);
+  padding: 1rem;
+}
+header div.mobile_search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+header div.mobile_search img {
+  width: 1rem;
+}
+@media all and (min-width: 768px) {
+  header div.mobile_search {
+    display: none;
+  }
+}
+header nav {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+header nav h1 {
+  display: none;
+  color: #dc1e52;
+}
+@media all and (min-width: 768px) {
+  header nav h1 {
+    display: block;
+  }
+}
+header nav > ul.icon {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+@media all and (min-width: 768px) {
+  header nav > ul.icon {
+    width: auto;
+  }
+}
+header nav > ul.icon li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+@media all and (min-width: 768px) {
+  header nav > ul.icon li {
+    flex-direction: row;
+  }
+}
+header nav > ul.icon li img {
+  width: 5rem;
+}
+header nav > ul.icon li p:nth-of-type(1) {
+  padding: 0.5rem 0;
+}
+header nav > ul.icon li p:nth-of-type(2) {
+  position: absolute;
+  top: 0.2rem;
+  left: 3.5rem;
+  border-radius: 8px 8px 8px 0;
+  background-image: linear-gradient(to bottom, #7f83a5 0%, #3c506a 50%, #7f83a5 100%);
+  color: #fff;
+  padding: 0 1rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+header nav > ul.icon li.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #222;
+}
+header nav ul.help {
+  display: none;
+}
+@media all and (min-width: 768px) {
+  header nav ul.help {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media all and (min-width: 768px) {
+  header nav ul.help li:first-child {
+    display: none;
+  }
+}
+@media all and (min-width: 1200px) {
+  header nav ul.help li:first-child {
+    display: block;
+  }
+}
+header nav ul.help li:not(:first-child) {
+  background-color: #888;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+header nav ul.help li:not(:first-child) img {
+  width: 1rem;
+}
+header div.pc_search {
+  display: none;
+}
+@media all and (min-width: 768px) {
+  header div.pc_search {
+    display: block;
+  }
+}
+header div.pc_search ul {
+  background-color: #fff;
+  width: 95%;
+  max-width: 1024px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  color: #888;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 3rem;
+  overflow: hidden;
+}
+header div.pc_search ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: 0.3s;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  cursor: pointer;
+  border-right: 1px solid #888;
+}
+header div.pc_search ul li:nth-child(1) {
+  flex: 1.5;
+}
+header div.pc_search ul li:nth-child(2), header div.pc_search ul li:nth-child(3) {
+  flex: 1;
+}
+header div.pc_search ul li:nth-child(4) {
+  flex: 1.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-right: 0;
+}
+header div.pc_search ul li:hover {
+  background-color: #ccc;
+  border-radius: 4rem;
+  border: none;
+}
+header div.pc_search ul li .txt {
+  font-size: 0.8rem;
+  margin: 0;
+}
+header div.pc_search ul li .txt:first-child {
+  font-size: 0.7rem;
+  color: #222;
+}
+header div.pc_search ul li .search_icon {
+  position: relative;
+  z-index: 2222;
+}
+header div.pc_search ul li .search_icon:hover {
+  filter: brightness(1.3);
+}
+
+main {
+  padding: 2rem;
+}
+
+main > section .title {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+main > section .title .sub p {
+  display: inline;
+}
+main > section .title .sub_icon {
+  display: none;
+}
+@media all and (min-width: 768px) {
+  main > section .title .sub_icon {
+    display: block;
+  }
+}
+main > section .title .sub_icon p {
+  display: inline-block;
+  padding: 2px;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #888;
+  text-align: center;
+  line-height: 1.2rem;
+}
+main > section ul {
+  margin: 1rem 0;
+  width: 270%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media all and (min-width: 768px) {
+  main > section ul {
+    width: 150%;
+  }
+}
+@media all and (min-width: 1200px) {
+  main > section ul {
+    width: 100%;
+  }
+}
+main > section ul .card {
+  flex: 1;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+main > section ul .card .image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+main > section ul .card .image p {
+  padding: 5px;
+  border-radius: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+main > section ul .card .image img {
+  width: 2rem;
+  transition: 0.3s;
+}
+main > section ul .card .image img:hover {
+  transform: scale(1.2);
+}
+
+main > section ul .card:nth-child(1) .image {
+  background-image: url(../IMG/contents/content01.jpg);
+}
+main > section ul .card:nth-child(2) .image {
+  background-image: url(../IMG/contents/content02.jpg);
+}
+main > section ul .card:nth-child(3) .image {
+  background-image: url(../IMG/contents/content03.jpg);
+}
+main > section ul .card:nth-child(4) .image {
+  background-image: url(../IMG/contents/content04.jpg);
+}
+main > section ul .card:nth-child(5) .image {
+  background-image: url(../IMG/contents/content05.jpg);
+}
+main > section ul .card:nth-child(6) .image {
+  background-image: url(../IMG/contents/content01.jpg);
+}/*# sourceMappingURL=style.css.map */
